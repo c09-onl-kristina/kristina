@@ -14,10 +14,8 @@ public class HomeWork {
      * 2. Дополнительно: сделать проверку если сумма a и b больше чем максимальное значение int то вернуть -1
      **/
     public static int sum(int a, int b) {
-        int max = 2147483647;
-        int min = -2147483648;
-        long tempSum = (long) a + (long) b;
-        if (tempSum < max && tempSum > min) {
+               long tempSum = (long) a + (long) b;
+        if (tempSum < Integer.MAX_VALUE && tempSum > Integer.MIN_VALUE) {
             return (int) tempSum;
         }
         return -1;
@@ -64,6 +62,10 @@ public class HomeWork {
      * Метод должен вернуть максимальый элемент массива. Пример: array = {1,2,10,3} метод возвращает 10
      **/
     public static int max(int[] array) {
+        if(array==null || array.length==0){
+            return 0;
+        }
+        else {
         int number = array[1];
         for (int i : array) {
             if (number < i) {
@@ -71,6 +73,7 @@ public class HomeWork {
             }
         }
         return number;
+    }
     }
 
     /**
