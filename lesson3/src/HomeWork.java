@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -60,12 +61,13 @@ public class HomeWork {
      * в котором это значение распечатается на консоль.
      */
     public static int calculateCountOfOddElementsInMatrix(int[] ints) {
-        int size = ints.length;
-        if (size % 2 > 0) {
-            return size / 2 + 1;
-        } else {
-            return size / 2;
+        int counter = 0;
+        for (int anInt : ints) {
+           if(anInt%2>0){
+               counter++;
+           }
         }
+        return counter;
     }
 
     /**
@@ -90,7 +92,11 @@ public class HomeWork {
             System.out.println(count + " программист");
         } else if (num > 1 && num < 5) {
             System.out.println(count + " программиста");
-        } else {
+        }
+        else if (count>20 && num>11 && num<15){
+            System.out.println(count + " программиста");
+        }
+            else {
             System.out.println(count + " программистов");
         }
     }
@@ -122,11 +128,9 @@ public class HomeWork {
                 row[c] = random.nextInt(100);
             }
         }
-        int i = 0;
         int sum = 0;
-        while (i < nums.length) {
+        for (int i=0; i < nums.length; i++) {
             sum = sum + nums[i][i];
-            i++;
         }
         System.out.println(sum);
     }
@@ -188,11 +192,17 @@ public class HomeWork {
      */
     public static void printPrimeNumbers() {
         for (int i = 2; i <= 1000; i++) {
-            if (i == 2 || i == 3 || i == 5 || i == 7) {
-                System.out.print(i + " ");
-            } else if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
-                System.out.print(i + " ");
-            }
+            int check = 0;
+           int num = i-1;
+               while (num>1){
+                   if (i%num==0){
+                       check++;
+                   }
+               num--;
+           }
+               if(check==0){
+                   System.out.print(i+ " ");
+               }
         }
     }
 }
