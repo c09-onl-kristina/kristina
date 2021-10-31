@@ -1,6 +1,14 @@
-abstract public class LandTransport extends Transport {
-    public int numberOfWheels;
-    public int fuelConsumption;
+public abstract class LandTransport extends Transport {
+    public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    protected int numberOfWheels;
+    protected int fuelConsumption;
 
     @Override
     public String description() {

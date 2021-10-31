@@ -1,5 +1,9 @@
 public class FreightTransport extends LandTransport {
-    public int carryingCapacity;
+    public void setCarryingCapacity(int carryingCapacity) {
+        this.carryingCapacity = carryingCapacity;
+    }
+
+    protected int carryingCapacity;
 
     @Override
     public String description() {
