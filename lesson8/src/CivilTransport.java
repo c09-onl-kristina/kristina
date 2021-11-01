@@ -1,6 +1,14 @@
 public class CivilTransport extends AirTransport {
-    public int numberOfPassengers;
-    public boolean businessClassAvailability;
+    public void setNumberOfPassengers(int numberOfPassengers) {
+        this.numberOfPassengers = numberOfPassengers;
+    }
+
+    public void setBusinessClassAvailability(boolean businessClassAvailability) {
+        this.businessClassAvailability = businessClassAvailability;
+    }
+
+    protected int numberOfPassengers;
+    protected boolean businessClassAvailability;
 
     @Override
     public String description() {

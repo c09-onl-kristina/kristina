@@ -1,6 +1,14 @@
 public class MilitaryTransport extends AirTransport {
-    public boolean catapultSystem;
-    public int numberOfMissilesOnBoard;
+    public void setCatapultSystem(boolean catapultSystem) {
+        this.catapultSystem = catapultSystem;
+    }
+
+    public void setNumberOfMissilesOnBoard(int numberOfMissilesOnBoard) {
+        this.numberOfMissilesOnBoard = numberOfMissilesOnBoard;
+    }
+
+    protected boolean catapultSystem;
+    protected int numberOfMissilesOnBoard;
 
     @Override
     public String description() {
@@ -12,6 +20,7 @@ public class MilitaryTransport extends AirTransport {
     public void shot() {
         if (numberOfMissilesOnBoard > 0) {
             System.out.println("Ракета пошла...");
+            numberOfMissilesOnBoard--;
         } else {
             System.out.println("Боеприпасы отсутствуют");
         }

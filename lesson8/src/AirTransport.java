@@ -1,6 +1,14 @@
 public class AirTransport extends Transport {
-    public int wingspan;
-    public int minimumRunwayLengthForTakeOff;
+    public void setWingspan(int wingspan) {
+        this.wingspan = wingspan;
+    }
+
+    public void setMinimumRunwayLengthForTakeOff(int minimumRunwayLengthForTakeOff) {
+        this.minimumRunwayLengthForTakeOff = minimumRunwayLengthForTakeOff;
+    }
+
+    protected int wingspan;
+    protected int minimumRunwayLengthForTakeOff;
 
     @Override
     public String description() {
