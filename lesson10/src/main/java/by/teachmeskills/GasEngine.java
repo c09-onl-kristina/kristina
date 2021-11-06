@@ -1,6 +1,6 @@
 package by.teachmeskills;
 
-public class GasEngine implements Engine{
+public class GasEngine implements Engine {
 
     private boolean engineOn = false;
 

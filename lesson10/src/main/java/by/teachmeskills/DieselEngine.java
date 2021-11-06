@@ -1,6 +1,6 @@
 package by.teachmeskills;
 
-public class DieselEngine implements Engine{
+public class DieselEngine implements Engine {
 
     private boolean engineOn = false;
 

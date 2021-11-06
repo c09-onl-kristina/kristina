@@ -24,7 +24,7 @@ public class Car {
     public void start() throws CarException {
         Random random = new Random();
         int number = random.nextInt(20);
-        if (number%2==0){
+        if (number % 2 == 0) {
             throw new CarException("Неисправность двигателя");
         }
     }
