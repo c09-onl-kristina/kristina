@@ -7,13 +7,26 @@
     <groupId>by.teachmeskills</groupId>
     <artifactId>kristina</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <packaging>pom</packaging>
 
     <modules>
         <module>lesson10</module>
         <module>lesson11</module>
-        <module>lesson12</module>
+        <module>Lesson14</module>
         <module>lesson13</module>
+        <module>lesson14</module>
     </modules>
 
     <properties>
