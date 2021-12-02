@@ -24,9 +24,13 @@
     <modules>
         <module>lesson10</module>
         <module>lesson11</module>
+
+        <module>lesson16</module>
+
         <module>Lesson14</module>
         <module>lesson13</module>
         <module>lesson14</module>
+
     </modules>
 
     <properties>
